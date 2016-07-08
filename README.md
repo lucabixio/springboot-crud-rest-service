@@ -17,15 +17,18 @@ The following classes are involved:
    "timestamp": 1467993597000 //in ms from epoch
 }
 ```
-- DataLoggerController is the service to manage the DataController. It needs the DataController (to this end use Dependecy Injection with Annotations) to operate on the Data controller.
-- DataLoggerControllerConfiguration to implement the Dependency Injection programmatically through Spring Annotations.
+- DataLoggerController is the service to manage the DataLogger. It needs the DataLogger to be injected (to this end use Dependecy Injection with Annotations) to operate on the DataLogger to add, remove, get the collected data.
+- DataLoggerControllerConfiguration to implement the Dependency Injection programmatically by using Spring Annotations.
 
 The following Web Methods will be available:
-- POST http://localhost:8080/data with Data in JSON format as Body Param
-- GET http://localhost:8080/data?from=<start_time_in_ms_from_epoch>&to=<end_time_in_ms_from_epoch> (note that from and to @RequestParam are optional, i.e., required = false)
-- DELETE http://localhost:8080/data?timestamp=<timestamp_in_ms_from_epoch>, where timestamp is the timestamp of the data record to delete from the Datalogger
+- POST http://localhost:8080/data with Data in JSON format as @RequestBody
+- GET http://localhost:8080/data?from=start_time_in_ms_from_epoch&to=end_time_in_ms_from_epoch (note that from and to @RequestParam are optional, i.e., required = false)
+- DELETE http://localhost:8080/data?timestamp=timestamp_in_ms_from_epoch, where timestamp is the timestamp of the data record to delete from the Datalogger
 
-Run the application as Spring Boot application and test the RESTful Web Service with Postman. Debug your code if necessary to understand the behavior of the developed Web Service
+## Actions to be done
+- Run (Debug) the application as Spring Boot application.
+- Test the RESTful Web Service with Postman.
+- Debug your code if necessary to understand the behavior of the developed Web Service.
 
 ## Additional (optional) step
 Develop a Test Unit for the RESTful Web Service
