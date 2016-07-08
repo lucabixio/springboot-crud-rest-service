@@ -38,5 +38,6 @@ Develop a Test Unit for the RESTful Web Service
 - Create the Web Service using the Spring Annotations. Use @RestController, @RequestMapping, @PathVariable, @RequestBody and @RequestParam to create the Web Service and the Web Methods.
 - Create a @Configuration to tell the Framework how to initialize the @Bean defined.
 - Use @Service and @Autowired to define the @Bean the framework has to manage and to tell the Framework where to inject them, respectively.
-- (Optionally) Create a test case by using @WebAppConfiguration and @Autowired annotations and WebApplicationContext and MockMvc classes;
+- Enable @CrossOrigin (only for debugging and developng purposes!)
+- (Optionally) Create a test case by using @WebAppConfiguration and @Autowired annotations and WebApplicationContext and MockMvc classes;	
 
